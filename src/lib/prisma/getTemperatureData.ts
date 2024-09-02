@@ -86,7 +86,7 @@ export async function getTemperatureDataLast4Weeks() {
   const currentDate = new Date();
 
   // Iterate over the fetched data and aggregate it by week
-  data.forEach((entry) => {
+  data.forEach((entry: any) => {
     const entryDate = new Date(entry.createdAt);
     const daysDifference = Math.floor(
       (currentDate.getTime() - entryDate.getTime()) / (1000 * 60 * 60 * 24)
@@ -144,7 +144,7 @@ export async function getTemperatureDataLast3Months() {
   const currentDate = new Date();
 
   // Iterate over the fetched data and aggregate it by month
-  data.forEach((entry) => {
+  data.forEach((entry:any) => {
     const entryDate = new Date(entry.createdAt);
     const monthsDifference =
       currentDate.getMonth() -
@@ -195,7 +195,7 @@ export async function getTemperatureDataLastYear() {
   const currentDate = new Date();
 
   // Iterate over the fetched data and aggregate it by month
-  data.forEach((entry) => {
+  data.forEach((entry:any) => {
     const entryDate = new Date(entry.createdAt);
     const monthsDifference =
       currentDate.getMonth() -
